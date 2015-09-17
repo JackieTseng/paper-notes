@@ -10,6 +10,7 @@ Much smaller models can achieve similar levels of performance as Deep Neural net
 ### Method
 
 * Main Idea
+
 > Wiring similar neurons together
 
 <p align="center">
