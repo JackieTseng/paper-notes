@@ -11,7 +11,9 @@ Much smaller models can achieve similar levels of performance as Deep Neural net
 
 * Main Idea
 
-![steps](img/process1.png)
+<p align="center">
+<img src="img/process1.png">
+</p>
 
 * Main steps
 
