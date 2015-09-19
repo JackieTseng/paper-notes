@@ -8,14 +8,18 @@ Compressing the neural network by removing neurons in a systematic way.
 Much smaller models can achieve similar levels of performance as Deep Neural nets.
 
 ### Method
+
 * Main Idea
+
 ![steps](img/process1.png)
 
 * Main steps
+
 ![methods](img/process2.png)
 
 ### Achievement
 
+Remove upto **85%** of the total parameter in an MNIST-trained network, and about **35%** for AlexNet without significantly affecting performance.
 
 ### Detailed Process
 
