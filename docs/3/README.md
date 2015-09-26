@@ -8,7 +8,7 @@ Compressing the neural network by removing neurons in a systematic way.
 Much smaller models can achieve similar levels of performance as Deep Neural nets.
 
 ### Method
-![method](/img/process2.png)
+![methods](img/process2.png)
 
 ### Achievement
 
