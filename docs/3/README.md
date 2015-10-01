@@ -5,6 +5,7 @@ Compressing the neural network by removing neurons in a systematic way.
 
 ### Problem
 
+Much smaller models can achieve similar levels of performance as Deep Neural nets.
 
 ### Method
 
