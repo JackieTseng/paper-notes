@@ -16,6 +16,7 @@
 * [Caffe](http://caffe.berkeleyvision.org/)
 * [Torch](http://torch.ch/)
 * [Theano](http://deeplearning.net/software/theano/)
+* [Tensorflow](http://tensorflow.org/)
 
 ## About
 
