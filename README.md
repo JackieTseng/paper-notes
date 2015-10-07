@@ -14,6 +14,8 @@
 
 ## Programming Frameworks
 * [Caffe](http://caffe.berkeleyvision.org/)
+* [Torch](http://torch.ch/)
+* [Theano]
 
 ## About
 
