@@ -8,8 +8,8 @@
 | 2 |Deep Compression: Compressing Deep Neural Network with Pruning, Trained Quantization and Huffman Coding|[pdf](http://arxiv.org/pdf/1510.00149v2.pdf)|[note](docs/2/README.md)|
 
 ## Conference
-* [ACML 2015](http://www.acml-conf.org/2015)
-* [NIPS 2015](https://nips.cc/Conferences/2015)
+* [ACML 2015](http://www.acml-conf.org/2015) - Nov 2015
+* [NIPS 2015](https://nips.cc/Conferences/2015) - Nov 2015
 
 ## About
 
