@@ -87,7 +87,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 ### Discussions
 
 * **Pruning and Quantization** working together receives the best compression rate and performance.
-* **Linear Initizlization** outperforms the density initialization and random initialization.
+* **Linear Initizlization** outperforms the density-based initialization and random initialization.
 
 ### Q & A
 1. How does the index-difference-encoding method works in pruning?
