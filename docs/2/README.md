@@ -82,7 +82,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 
 ### Experiment
 
-* Training is performed with Caffe framework. Pruning is implemented by adding a mask to the blobs and mask out the update of those pruned connections. Quantization and weight sharing are implemented by maintaining a codebook structure that stores the shared weight, and group-by-index after calculating the gradient of each layer, then update the shared weight with all the gradients that fall into that bucket. Huffman coding doesn¡¯t require training and is implemented offline after all the fine-tuning is finished.
+* Training is performed with Caffe framework. Pruning is implemented by adding a mask to the blobs and mask out the update of those pruned connections. Quantization and weight sharing are implemented by maintaining a codebook structure that stores the shared weights, and group-by-index after calculating the gradient of each layer, then update the shared weight with all the gradients that fall into that bucket. Huffman coding doesn¡¯t require training and is implemented offline after all the fine-tuning is finished.
 
 ### Discussions
 
