@@ -78,7 +78,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 
 #### Huffman Coding
 
-* Huffman coding can be efficiently implemented, finding a code in linear time to the number of input weights if these weights are sorted. Besides, Huffman code is a loss-less compression method, so the accuracy of the network won¡¯t be affected. Experiments shown Huffman coding could save the last 20% - 30% storage of the network weights.
+* Huffman coding can be efficiently implemented, finding a code in linear time to the number of input weights if these weights are sorted. Besides, Huffman coding is a loss-less compression method, so the accuracy of the network won¡¯t be affected. Experiments shown Huffman coding could save the last 20% - 30% storage of the network weights.
 
 ### Experiment
 
