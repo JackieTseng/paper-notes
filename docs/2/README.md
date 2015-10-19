@@ -66,7 +66,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 * Density-based
 * Linear
 
-> Larger weights play a more important role than smaller weights. However, larger weights have smaller quantity. Thus for both Forgy initialization and density based initialization, very few centroids have large absolute value which could harm the performance. **Linear initialization** does not suffer from this problem. The experiment section compares the accuracy of different initialization methods after clustering and fine-tuning, showing that linear initialization works best.
+> Larger weights play a more important role than smaller weights. However, larger weights have smaller quantity. Thus for both Forgy initialization and density-based initialization, very few centroids have large absolute value which could harm the performance. **Linear initialization** does not suffer from this problem. The experiment section compares the accuracy of different initialization methods after clustering and fine-tuning, showing that linear initialization works best.
 
 #### Feed-forward and Back-propagation
 
