@@ -55,7 +55,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 #### Weight Sharing
 
 <p align="center">
-<img src="img/process5.png"/>
+<img src="img/formula2.png"/>
 </p>
 
 #### Initialization of shared weights
@@ -73,7 +73,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 * The centroids of the one-dimensional k-means clustering are the shared weights. There is one level of indirection during feed forward phase and back-propagation phase looking up the weight table. An index into the shared weight table is stored for each connection. During back-propagation, the gradient for each shared weight is calculated and used to update the shared weight.
 
 <p align="center">
-<img src="img/process6.png"/>
+<img src="img/formula3.png"/>
 </p>
 
 #### Huffman Coding
