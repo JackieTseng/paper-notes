@@ -49,7 +49,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 </p>
 2. For each connection, we then need to store only a small index into a table of shared weights.
 <p align="center">
-<img src="img/process4.png"/>
+<img src="img/formula1.png"/>
 </p>
 
 #### Weight Sharing
