@@ -19,7 +19,19 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 #### Detailed Process
 1. Train the whole network to learn which are important connections rather than the final values of the weights.
 2. Prune the low-weight connections which weights below a set threshold -- converting a dense network into a sparse network.
-3. Retain the network to learn the final weights for remaining sparse connectiongs. This step is critical for the accuracy and network performance.
-<div style="text-align:center" markdown="1">
+3. Retain the network to learn the final weights for remaining sparse connectiongs. This step is critical for the accuracy and network performance. Return Step 2 iteratively.
+
 ![Process](img/process.png)
-</div>
+
++ Regularization : Choose the correct regularization.
+ + L1 regularization penalizes no-zero parameters resulting in more parameter near zero. This gives better accuracy after pruning, but before retraining.
+ + L2 regulatization will result in lower accuracy after retraining.
+
++ Dropout and Capacity Control
+ + Dropout can prevent over-fitting and apllies to retraining. However, this mothod is regarded as ***soft dropout***, since each parameter is not definitely dropped out. The method mentioned in this paper is ***hard dropout***.
+ + As the parameters get sparse, the classifier will select the most informative predictors and thus have much less prediction variance which reduces ***over-fitting***.
+ + As pruning already reduced model capacity, the retraining dropout ratio shoule be smaller. As follow :
+
+<img align="center" src="img/dropout_ratio.png">
+
+![Dropout Ratio](img/dropout_ratio.png)
