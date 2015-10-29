@@ -32,6 +32,8 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
  + As the parameters get sparse, the classifier will select the most informative predictors and thus have much less prediction variance which reduces ***over-fitting***.
  + As pruning already reduced model capacity, the retraining dropout ratio shoule be smaller. As follow :
 
-<p align="center">![Dropout Ratio](img/dropout_ratio.png)</p>
+<p align="center" markdown="1">![Dropout Ratio](img/dropout_ratio.png)</p>
 
 + Local Pruning and Parameter Co-adaptation
+ + During retraining, it is better to retain the weights from the initial training phase for the connections that survived pruning thah it is to re-initialize the pruned layers since CNNs contain ***fragile co-adapted*** features.
+ + Dealing with the ***Vanishing gradient problem***, the author fix the paramter for part of network and only retain a shallow network by reusing the surviving parameters, with already co-adapted well with the un-pruned layers during initial training.
