@@ -20,4 +20,6 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 1. Train the whole network to learn which are important connections rather than the final values of the weights.
 2. Prune the low-weight connections which weights below a set threshold -- converting a dense network into a sparse network.
 3. Retain the network to learn the final weights for remaining sparse connectiongs. This step is critical for the accuracy and network performance.
+<div style="text-align:center" markdown="1">
 ![Process](img/process.png)
+</div>
