@@ -21,7 +21,9 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 2. Prune the low-weight connections which weights below a set threshold -- converting a dense network into a sparse network.
 3. Retain the network to learn the final weights for remaining sparse connectiongs. This step is critical for the accuracy and network performance. Return Step 2 iteratively.
 
-<p align="center">![Process](img/process.png)</p>
+<p align="center">
+    <img src="img/process.png"/>
+</p>
 
 + Regularization : Choose the correct regularization.
  + L1 regularization penalizes no-zero parameters resulting in more parameter near zero. This gives better accuracy after pruning, but before retraining.
@@ -32,7 +34,9 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
  + As the parameters get sparse, the classifier will select the most informative predictors and thus have much less prediction variance which reduces ***over-fitting***.
  + As pruning already reduced model capacity, the retraining dropout ratio shoule be smaller. As follow :
 
-<p align="center" markdown="1">![Dropout Ratio](img/dropout_ratio.png)</p>
+<p align="center">
+<img src="img/dropout_ratio.png" alt="Dropout Ratio"/>
+</p>
 
 + Local Pruning and Parameter Co-adaptation
  + During retraining, it is better to retain the weights from the initial training phase for the connections that survived pruning thah it is to re-initialize the pruned layers since CNNs contain ***fragile co-adapted*** features.
