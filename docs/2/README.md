@@ -43,7 +43,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 
 > Reduce the number of bits to represent each weight
 
-1 .Limit the number effective weights needed to store by having multiple connections share the same weight and fine-tune those shared weights. (As the following figures)
+1. Limit the number effective weights needed to store by having multiple connections share the same weight and fine-tune those shared weights. (As the following figures)
 <p align="center">
 <img src="img/process3.png"/>
 </p>
