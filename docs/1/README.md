@@ -1,22 +1,27 @@
-### Learning both Weights and Connections for Efficient Neural Networks -- Paper Note
-#### Introduction
+## Learning both Weights and Connections for Efficient Neural Networks -- Paper Note
+### Introduction
+
 Pruning the redundant/unimportant connections using a three-step method in order to reduce the parameters, storage and computations of neural networks and applied to the mobile devices.
 
-#### Problem
+### Problem
+
 1. Significant redundancy for deep learning models.
  + The relative approximation and quantization techniques are orthgonal to network pruning, and can potentially be used together to obtain further gains.
 2. Large number of parameters of nerual networks.
 3. Complexity and Over-fitting.
 
-#### Method
+### Method
+
 1. Train the network to learn which connections are important.
 2. Prune the unimportant connections.
 3. Retrain the network to fine tune the weights of the remaining connections.
 
-#### Achievement
+### Achievement
+
 On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor of **9X**, from **61** million to **6.7** million while VGG16 network can be reduced **13X**. All with no loss of accuracy.
 
-#### Detailed Process
+### Detailed Process
+
 1. Train the whole network to learn which are important connections rather than the final values of the weights.
 2. Prune the low-weight connections which weights below a set threshold -- converting a dense network into a sparse network.
 3. Retain the network to learn the final weights for remaining sparse connections. This step is critical for the accuracy and network performance. Restart from Step 2 iteratively untill the network is stable.
@@ -27,7 +32,7 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 
 + **Regularization** : Choose the correct regularization.
  + **L1 regularization** penalizes no-zero parameters resulting in more parameters near zero. This gives better accuracy after pruning, but before retraining.
- + **L2 regulatization** will result in lower accuracy after retraining.
+ + **L2 regulatization** will result in lower accuracy after retraining but give the best pruning results.
 
 + **Dropout and Capacity Control**
  + Dropout can prevent over-fitting and applies to retraining. However, this mothod is regarded as ***soft dropout***, since each parameter is not definitely dropped out. The method mentioned in this paper is ***hard dropout***.
@@ -47,3 +52,14 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 
 + **Pruning Neurons**
  + After pruning connections, neurons with zero input conncetions or zero output connectiongs may be safely pruned.
+ 
++ **Pruning Threshold** 
+ + Chosen as a quality parameter multiplied by the standard deviation of a layer's weights.
+
+### Experiment
+
+* L1 regularization performs better than L2 at learning the connectiongs without retraining, while L2 regularization performs better than L1 at retraining. **Iterative pruning** gives the best result.
+* Both **CONV** and **FC** layers can be pruned, but with different sensitivity.
+* Using the sensitivity results to find each layer's threshold, like the smallest threshold is applied to the most sensitive layer.
+* Storing the pruned layers as sparse matrives.
+* Storing relative rather than absolute indices reduces the space taken by the **FC** layer indices to 5 bits. Similarly, **CONV** layer indices can be represented with only 8 bits.
