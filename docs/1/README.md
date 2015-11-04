@@ -73,3 +73,4 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 5. When will I stop training or retraining phase and step into pruning phase?
 6. When is the network stable for finishing process?
 7. I don't understand the relative and absolute indices.
+8. How can a weight and neuron be deleted in Caffe? 
