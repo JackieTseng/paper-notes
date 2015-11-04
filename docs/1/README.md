@@ -44,8 +44,8 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 </p>
 
 + **Local Pruning and Parameter Co-adaptation**
- + During retraining, it is better to retain the weights from the initial training phase for the connections that survived pruning thah it is to re-initialize the pruned layers since CNNs contain ***fragile co-adapted*** features.
- + Dealing with the ***Vanishing gradient problem***, the author fix the paramters for part of network and only retain a shallow network by reusing the surviving parameters, with already co-adapted well with the un-pruned layers during initial training.
+ + During retraining, it is better to retain the weights from the initial training phase for the connections that survived pruning than it is to re-initialize the pruned layers since CNNs contain ***fragile co-adapted*** features.
+ + Dealing with the ***vanishing gradient problem***, the author fix the paramters for part of network and only retain a shallow network by reusing the surviving parameters, with already co-adapted well with the un-pruned layers during initial training.
 
 + **Iteraitve Pruning**
  + Pruning followed by a retraining is one iteration, after many such iterations the minimum number conncetions could be found.
@@ -63,3 +63,13 @@ On the ImageNet dataset, reduced the number of parameters of AlexNet by a factor
 * Using the sensitivity results to find each layer's threshold, like the smallest threshold is applied to the most sensitive layer.
 * Storing the pruned layers as sparse matrives.
 * Storing relative rather than absolute indices reduces the space taken by the **FC** layer indices to 5 bits. Similarly, **CONV** layer indices can be represented with only 8 bits.
+
+### Q&A
+
+1. Does important means that the weight is small than the threshold?
+2. How to compute the proper threshold?
+3. Are soft dropout and hard dropout used at the same time? 
+4. How to set dropout rate?
+5. When will I stop training or retraining phase and step into pruning phase?
+6. When is the network stable for finishing process?
+7. I don't understand the relative and absolute indices.
