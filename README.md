@@ -10,5 +10,5 @@
 ## About
 
 * [Github Repository](https://github.com/JackieTseng/paper-notes)
-* Author : Zhuobin Zheng
+* Author : Zhuobin Zheng(Jackie Tseng)
 * Nov. 2015
