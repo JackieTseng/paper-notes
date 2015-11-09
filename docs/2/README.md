@@ -1,4 +1,5 @@
 ## Deep Compression: Compressing Deep Neural Network with Pruning, Trained Quantization and Huffman Coding -- Paper Note
+
 ### Introduction
 
 Compressing the neural networks by a three stage pipeline: pruning, trained quantization and huffman coding to reduce the storage requirement. This allows fitting the model into mobile apps given size limit.
