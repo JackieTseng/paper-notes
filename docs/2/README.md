@@ -16,7 +16,7 @@ Compressing the neural networks by a three stage pipeline: pruning, trained quan
 3. Retrain the network to fine tune the remaining connections and the quantized centroids.
 
 <p align="center">
-<img src="img/process1.png"/>
+<img src="img/process1.PNG"/>
 </p>
 
 ### Achievement
@@ -36,7 +36,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 #### Trained Quantization and weight sharing
 
 <p align="center">
-<img src="img/process2.png"/>
+<img src="img/process2.PNG"/>
 </p>
 
 ### Experiment
