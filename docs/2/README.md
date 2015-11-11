@@ -86,7 +86,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 
 ### Discussions
 
-* **Pruning and Quantization** working together receive the best compression rate and performance.
+* **Pruning and Quantization** working together receives the best compression rate and performance.
 * **Linear Initizlization** outperforms the density initialization and random initialization.
 
 ### Q & A
