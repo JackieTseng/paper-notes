@@ -7,7 +7,7 @@ Compressing the neural networks by a three-stage pipeline: pruning, trained quan
 
 1. **Computationally intensive** and **memory intensive**, making them difficult to deploy on embedded systems with limited hardware resources.
 2. **Large storage overhead** prevents deep neural networks from being incorporated into mobile apps which are very sensitive to the size of the binary files. 
-3. **Energy consumption**. Mobile devices are battery constrained, making power hungry applications such as deep neural networks hard to deploy
+3. **Energy consumption**. Mobile devices are battery constrained, making power-hungry applications such as deep neural networks hard to deploy.
 
 ### Method
 
