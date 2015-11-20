@@ -12,7 +12,7 @@ Compressing the neural networks by a three-stage pipeline: pruning, trained quan
 ### Method
 
 1. Prune the network by learning only the important conncetions and removing the redundant connections, keeping only the most informative connections.
-2. Quantize the wights to enforce weight sharing and apply Huffman coding. As a result, only the codebook(effective weights) and the indices need to be stored.
+2. Quantize the weights to enforce weights sharing and apply Huffman coding. As a result, only the codebook(effective weights) and the indices need to be stored.
 3. Apply Huffman coding to take advantage of the biased distribution of effective weights.
 
 <p align="center">
