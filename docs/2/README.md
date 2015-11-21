@@ -30,7 +30,7 @@ On the ImageNet dataset, reduced the storage of AlexNet by **35X**, from **240**
 > Reduce the number of weights
 
 1. Learn the connectivity via normal network training and prune the small-weight connections with below a threshold. Finally retrain the network to learn the final weights for the remaining sparse conncetions. [more details](https://github.com/JackieTseng/paper-notes/blob/master/docs/1/README.md)
-2. Store the sparse structure using **compressed sparse row([CSR](http://www.netlib.org/utk/people/JackDongarra/etemplates/node373.html))** or **compressed sparse column([CSC](http://www.netlib.org/utk/people/JackDongarra/etemplates/node374.html))** format, which requires ***2nn + n + 1*** numbers, where **nnz** is the number of non-zero elements and n is the number of rows or columns.
+2. Store the sparse structure using **compressed sparse row([CSR](http://www.netlib.org/utk/people/JackDongarra/etemplates/node373.html))** or **compressed sparse column([CSC](http://www.netlib.org/utk/people/JackDongarra/etemplates/node374.html))** format, which requires ***2nn + n + 1*** numbers, where ***nnz*** is the number of non-zero elements and ***n*** is the number of rows or columns.
 3. Store the index difference instead of the absolute position, and encode this difference in 8 bits for conv layer and 5 bits for fc layer. When we need an index difference larger than the bound we have two solutions(As the following figure):
 	* **Zero padding** : in case when the difference exceeds 8, the largest 3-bit (as an example) unsigned number, we add a dummy zero.
 	* **Adding overflow code** : so that 1-7 represent normal jump, while 8 is the overflow code, meaning continue adding the next index difference to get a larger index difference. 
