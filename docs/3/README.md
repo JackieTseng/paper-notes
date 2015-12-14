@@ -23,7 +23,7 @@ Much smaller models can achieve similar levels of performance as Deep Neural net
 
 ### Achievement
 
-Remove upto **85%** of the total parameter in an MNIST-trained network, and about **35%** for AlexNet without significantly affecting performance.
+Remove upto **85%** of the total parameters in an MNIST-trained network, and about **35%** for AlexNet without significantly affecting performance.
 
 ### Detailed Process
 
